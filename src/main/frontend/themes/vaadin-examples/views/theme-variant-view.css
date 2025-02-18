@@ -1,0 +1,19 @@
+[theme~="light"] {
+    --lumo-primary-color: hsl(214, 100%, 43%);
+}
+
+[theme~="dark"] {
+    --lumo-primary-color: hsl(43deg 98% 50%);
+}
+
+[theme~="red"] {
+    --lumo-primary-color: hsl(356deg 100% 61%);
+}
+
+[theme~="blue"] {
+    --lumo-primary-color: hsl(198deg 100% 50%);
+}
+
+[theme~="green"] {
+    --lumo-primary-color: hsl(158deg 74% 38%);
+}

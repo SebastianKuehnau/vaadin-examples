@@ -34,7 +34,7 @@ import org.vaadin.lineawesome.LineAwesomeIconUrl;
 
 @PageTitle("Master-Detail")
 @Route("master-detail/:samplePersonID?/:action?(edit)")
-@Menu(order = 3, icon = LineAwesomeIconUrl.COLUMNS_SOLID)
+@Menu(icon = LineAwesomeIconUrl.COLUMNS_SOLID)
 @Uses(Icon.class)
 public class MasterDetailView extends Div implements BeforeEnterObserver {
 
