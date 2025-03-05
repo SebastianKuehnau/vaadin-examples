@@ -13,17 +13,14 @@ import com.vaadin.flow.dom.ThemeList;
 import com.vaadin.flow.router.Menu;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import com.vaadin.flow.router.RouteAlias;
 import com.vaadin.flow.theme.lumo.Lumo;
 import org.vaadin.lineawesome.LineAwesomeIconUrl;
 
 import java.util.List;
-import java.util.Set;
 
 @PageTitle("Change Theme Variant in Flow")
 @Menu(icon = LineAwesomeIconUrl.LIGHTBULB, title = "Theme Variants", order = 3)
-@Route("")
-@RouteAlias("theme-variant")
+@Route("theme-variant")
 public class ThemeVariantView extends VerticalLayout {
 
     private final ComboBox<String> variantSelect = new ComboBox<>("Individual Theme Variants");
