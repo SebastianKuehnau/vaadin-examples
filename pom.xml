@@ -53,6 +53,18 @@
         </dependency>
 
         <dependency>
+            <groupId>com.flowingcode.vaadin.addons</groupId>
+            <artifactId>syntax-highlighter-addon</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.vaadin.addons.stefan</groupId>
+            <artifactId>clipboard</artifactId>
+            <version>1.0.3</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
