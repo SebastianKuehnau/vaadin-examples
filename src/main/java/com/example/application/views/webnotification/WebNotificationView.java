@@ -30,8 +30,7 @@ import java.util.Locale;
 
 @PageTitle("Web Push Notification")
 @Menu(icon = LineAwesomeIconUrl.ARROW_ALT_CIRCLE_UP_SOLID, title = "Web Notification", order = 5)
-@Route("")
-@RouteAlias("web-notification")
+@Route("web-notification")
 public class WebNotificationView extends VerticalLayout {
 
     private final WebPush webpush;
@@ -79,7 +78,7 @@ public class WebNotificationView extends VerticalLayout {
         grid.addColumn(SalesData::productName)
                 .setHeader("Product Name")
                 .setAutoWidth(true);
-        for (Month month : List.of(Month.JANUARY, Month.FEBRUARY, Month.MARCH)) {
+        for (Month month : List.of(Month.JANUARY)) {
             grid.addColumn(getSalesDataLitRenderer(month))
                     .setAutoWidth(true)
                     .setTextAlign(ColumnTextAlign.CENTER)
@@ -99,7 +98,7 @@ public class WebNotificationView extends VerticalLayout {
                             ui.access(() -> {
 
                                 //step 7: send notifiation to subscribed clients
-                                webPushService.notifyAll("Message from your Vaadin App", "Heavy Work is ready, so please come back!", "/web-notification");
+                                webPushService.notifyAll("Message from your Vaadin App", "Heavy Work is ready, so please come back!");
 
                                 grid.setItems(salesDataList);
 
@@ -118,7 +117,9 @@ public class WebNotificationView extends VerticalLayout {
         progressBar.setVisible(false);
         progressBar.setIndeterminate(true);
 
-        add(new HorizontalLayout(heavyButton, progressBar), subscribed, content);
+        HorizontalLayout buttonLayout = new HorizontalLayout(heavyButton, progressBar);
+        buttonLayout.setAlignItems(Alignment.CENTER);
+        add(buttonLayout, subscribed, content);
         setSizeFull();
     }
 
